@@ -1,0 +1,5 @@
+{
+    "require": {
+      "fusionauth/fusionauth-client": "^1.18"
+    }
+}
