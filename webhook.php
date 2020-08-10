@@ -41,5 +41,5 @@ if (!$response->wasSuccessful()) {
   error_log(var_export($response, TRUE));
   return;
 }
-http_response_code(400);
+http_response_code(403);
 ?>
