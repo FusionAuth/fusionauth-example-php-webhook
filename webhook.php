@@ -2,6 +2,22 @@
 require __DIR__. '/config.php';
 require __DIR__ . '/vendor/autoload.php';
 
+error_log("here");
+
+$headers = getallheaders();
+if (!$headers) {
+  error_log("Invalid authorization header.");
+  return;
+}
+
+error_log($headers);
+
+$authorization_value = $headers['Authorization'];
+if ($authorization_value !== $authorization_header_value) {
+  error_log("Invalid authorization header value found: ".$authorization_value);
+  return;
+}
+
 $input = file_get_contents('php://input');
 
 $obj = json_decode($input);
