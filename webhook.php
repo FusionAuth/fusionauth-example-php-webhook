@@ -23,5 +23,11 @@
   }
   $client = new FusionAuth\FusionAuthClient($api_key, $fa_url);
   $response = $client->deactivateUser($user_id);
+  if (!$response->wasSuccessful()) {
+    // uh oh
+    error_log("Response wasn't successful:");
+    error_log(var_export($response, TRUE));
+    return;
+  }
   http_response_code(400);
 ?>
