@@ -2,8 +2,6 @@
 require __DIR__. '/config.php';
 require __DIR__ . '/vendor/autoload.php';
 
-error_log("here");
-
 $headers = getallheaders();
 if (!$headers) {
   error_log("Invalid authorization header.");
