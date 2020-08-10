@@ -8,8 +8,6 @@ if (!$headers) {
   return;
 }
 
-error_log($headers);
-
 $authorization_value = $headers['Authorization'];
 if ($authorization_value !== $authorization_header_value) {
   error_log("Invalid authorization header value found: ".$authorization_value);
