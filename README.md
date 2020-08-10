@@ -18,7 +18,7 @@ Note that breached password detection is a feature available to FusionAuth insta
 * Clone this repo and change directory into it.
 * Run `composer install`.
 * Create an API key for locking the user account.
-* Update `config.php` with the API key and your FusionAuth instance URL, if needed.
+* Update `config.php` with the API key, your authorization header value, and your FusionAuth instance URL, if needed.
 * Start a webserver: `php -S 0.0.0.0:8000` . This should not be used for production.
 * Log into the administrative user interface.
 * Go to the *Reactor* tab.
@@ -32,6 +32,7 @@ Note that breached password detection is a feature available to FusionAuth insta
 * Create a new webhook.
 ** Set the value of the URL to: "http://localhost:8000/webhook.php"
 ** Uncheck all the events except for `user.password.breach`
+** Set the appropriate authorization header value under the 'Headers' tab.
 ** Save it
 * You should be able to test it out. 
 ** If the event type is anything other than `user.password.breach` the webhook will just log a message.
