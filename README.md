@@ -2,6 +2,7 @@
 
 This repository is a webhook to listen for a breached password event on login. If a user has compromised credentials, the system will lock their account.
 
+You can read the blog post here: https://fusionauth.io/blog/2020/08/13/locking-an-account-with-breached-password
 
 ## To use
 
