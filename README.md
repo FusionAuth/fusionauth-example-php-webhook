@@ -41,7 +41,7 @@ Note that breached password detection is a feature available to FusionAuth insta
 ### To use
 
 * Create a user with an insecure password such as `password` via the *Users* section.
-** You may need to disable the breached password detection first and then add the user and then re-enable it.
+  * You may need to disable the breached password detection first and then add the user and then re-enable it.
 * In an incognito window, login as this user.
 * You should not be able to login.
 
