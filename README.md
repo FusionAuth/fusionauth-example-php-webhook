@@ -31,12 +31,12 @@ Note that breached password detection is a feature available to FusionAuth insta
 * Change the 'On Login' option to be 'Only record the result'.
 * Navigate to the *Settings* section and then to *Webhooks* 
 * Create a new webhook.
-** Set the value of the URL to: "http://localhost:8000/webhook.php"
-** Uncheck all the events except for `user.password.breach`
-** Set the appropriate authorization header value under the 'Headers' tab.
-** Save it
+  * Set the value of the URL to: "http://localhost:8000/webhook.php"
+  * Uncheck all the events except for `user.password.breach`
+  * Set the appropriate authorization header value under the 'Headers' tab.
+  * Save it
 * You should be able to test it out. 
-** If the event type is anything other than `user.password.breach` the webhook will just log a message.
+  * If the event type is anything other than `user.password.breach` the webhook will just log a message.
 
 ### To use
 
